@@ -37,8 +37,8 @@ const Paginator = ({ isLight, overlay, showSkip, showNext, showDone, pages, curr
     <PageDots isLight={isLight} pages={pages} currentPage={currentPage} />
     <View style={styles.buttonRight}>
       {currentPage + 1 === pages ?
-        (showDone ? <DoneButton isLight={isLight} size={BUTTON_SIZE} onPress={onEnd} /> : null) :
-        (showNext ? <NextButton isLight={isLight} size={BUTTON_SIZE} onPress={onNext} /> : null)
+        (showDone ? <DoneButton isLight={isLight} size={BUTTON_SIZE} onPress={onEnd} testID="DoneButton"/> : null) :
+        (showNext ? <NextButton isLight={isLight} size={BUTTON_SIZE} onPress={onNext} testID="NextButton"/> : null)
       }
     </View>
   </View>
